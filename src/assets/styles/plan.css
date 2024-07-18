@@ -1,0 +1,13 @@
+@import "./global.css";
+
+.cc-plan-plan-entry {
+  background-color:  #E2E9FF;
+  border: solid 1px #380176;
+  border-radius: 4px;
+  margin-bottom: 8px;
+  padding: 8px;
+}
+
+.cc-plan-step-title {
+  font-weight: bold;
+}

@@ -1,0 +1,15 @@
+.cc-page {
+  direction: rtl;
+  margin: 32px;
+}
+
+.menu-icon {
+  height: 32px;
+  margin-left: 16px;
+  cursor: pointer;
+}
+
+.editor-comment {
+  font-style: italic;
+  color: darkseagreen;
+}
