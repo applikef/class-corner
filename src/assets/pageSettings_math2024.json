@@ -1,7 +1,7 @@
 {
-  "title": "קורס קוסמים",
+  "title": "מתימטיקה",
   "subtitle": "שנת 2024-2025",
-  "image": "resources/user-defined/pencil.png",
+  "image": "resources/math2024/pencil.png",
   "targetPages": [
     "syllabus",
     "plan"
@@ -10,12 +10,12 @@
     "title": "מהלך הקורס",
     "entries": [
       {
-        "title": "שלום",
+        "title": "משוואות",
         "targetDate": "30-Sep-2024",
         "detailsUrl": "https://docs.google.com/document/d/1BR19ShVzKZ3YhIx-L-UlenuupLYqJpXy/edit?usp=sharing&ouid=108454013441329303622&rtpof=true&sd=true"
       },
       {
-        "title": "ברכה",
+        "title": "גרפים",
         "targetDate": "30-Dec-2024",
         "detailsUrl": "https://drive.google.com/file/d/1KeZMlXqa6Ryk6Vakf9lM519QMZ6I652p/view?usp=sharing"
       }
@@ -23,6 +23,6 @@
   },
   "syllabus": {
     "title": "תוכן הקורס",
-    "content": "resources/user-defined/magic2024.syllabus.html"
+    "content": "resources/math2024/syllabus.html"
   }
 }

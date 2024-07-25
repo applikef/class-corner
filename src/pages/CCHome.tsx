@@ -1,17 +1,28 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import "./../assets/styles/home.css";
+import CCContext, { CCContextType } from "../model/CCContext";
 
-export const CCHome = () => {
-  const settings = require("./../assets/pageSettings.json");
+interface CCHomeProps {
+  course: string;
+}
+
+export const CCHome = (props: CCHomeProps) => {
+  const activeCourse = props.course;
+
+  const settings = require(`./../assets/pageSettings_${activeCourse}.json`);
   const navigate = useNavigate();
+  const {
+    setCourse
+  } = useContext(CCContext) as CCContextType;
 
   function getTarget(page: string): string {
+    setCourse(activeCourse);
     switch (page) {
       case "plan":
-        return './plan';
+        return `./plan`;
       case "syllabus":
-        return './syllabus';
+        return `./syllabus`;
       default:
         return '/';
     }
@@ -25,7 +36,7 @@ export const CCHome = () => {
       <h2>{ settings.subtitle }</h2>
       <ul>
         { settings.targetPages.map((page: string, i:number) =>
-            <li className="app-option-entry" 
+            <li className="app-option-entry" key={i}
               onClick={ () => navigate(getTarget(page))}>{ settings[page].title }</li>      
         )}
       </ul>

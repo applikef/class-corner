@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./../assets/styles/syllabus.css";
 import { CCBanner } from "../components/CCBanner";
+import CCContext, { CCContextType } from "../model/CCContext";
 
 export const CCSyllabus = () => {
-  const settings = require("./../assets/pageSettings.json")["syllabus"];
+  const {
+    course
+  } = useContext(CCContext) as CCContextType;
 
+  const settings = require(`./../assets/pageSettings_${course}.json`)["syllabus"];
+  
   return(
     <div className="cc-page">
       <CCBanner/>

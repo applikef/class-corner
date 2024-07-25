@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./../assets/styles/plan.css";
 import { CCBanner } from "../components/CCBanner";
+import CCContext, { CCContextType } from "../model/CCContext";
 
 export const CCPlan = () => {
-  const settings = require("./../assets/pageSettings.json")["plan"];
+  const {
+    course
+  } = useContext(CCContext) as CCContextType;
+
+  const settings = require(`./../assets/pageSettings_${course}.json`)["plan"];
   
   return (
   <div className="cc-page">
