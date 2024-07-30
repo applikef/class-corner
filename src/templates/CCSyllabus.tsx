@@ -5,10 +5,11 @@ import CCContext, { CCContextType } from "../model/CCContext";
 
 export const CCSyllabus = () => {
   const {
-    course
+    course,
+    pageId
   } = useContext(CCContext) as CCContextType;
 
-  const settings = require(`./../assets/pageSettings_${course}.json`)["syllabus"];
+  const settings = require(`./../assets/pageSettings_${course}.json`)[pageId];
   
   return(
     <div className="cc-page">

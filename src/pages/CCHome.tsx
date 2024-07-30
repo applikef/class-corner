@@ -13,19 +13,14 @@ export const CCHome = (props: CCHomeProps) => {
   const settings = require(`./../assets/pageSettings_${activeCourse}.json`);
   const navigate = useNavigate();
   const {
-    setCourse
+    setCourse,
+    setPageId
   } = useContext(CCContext) as CCContextType;
 
-  function getTarget(page: string): string {
+  function gotoTarget(pageId: string) {
     setCourse(activeCourse);
-    switch (page) {
-      case "plan":
-        return `./plan`;
-      case "syllabus":
-        return `./syllabus`;
-      default:
-        return '/';
-    }
+    setPageId(pageId);
+    navigate(`./${settings[pageId].template}`);
   }
 
   return (
@@ -35,9 +30,9 @@ export const CCHome = (props: CCHomeProps) => {
       <h1>{ settings.title }</h1>
       <h2>{ settings.subtitle }</h2>
       <ul>
-        { settings.targetPages.map((page: string, i:number) =>
+        { settings.targetPages.map((pageId: string, i:number) =>
             <li className="app-option-entry" key={i}
-              onClick={ () => navigate(getTarget(page))}>{ settings[page].title }</li>      
+              onClick={ () => gotoTarget(pageId)}>{ settings[pageId].title }</li>      
         )}
       </ul>
     </div>

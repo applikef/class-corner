@@ -3,10 +3,11 @@
   "subtitle": "שנת 2024-2025",
   "image": "resources/math2024/pencil.png",
   "targetPages": [
-    "syllabus",
-    "plan"
+    "syllabus-1",
+    "plan-1"
   ],
-  "plan": {
+  "plan-1": {
+    "template": "plan",
     "title": "מהלך הקורס",
     "entries": [
       {
@@ -21,7 +22,8 @@
       }
     ]
   },
-  "syllabus": {
+  "syllabus-1": {
+    "template": "syllabus",
     "title": "תוכן הקורס",
     "content": "resources/math2024/syllabus.html"
   }

@@ -39,5 +39,6 @@
 }
 
 .app-option-entry {
+  text-align: right;
   cursor: pointer;
 }

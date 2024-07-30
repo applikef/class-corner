@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 export type CCContextType = {
   course: string;
   setCourse: (courseId: string) => void;
+  pageId: string;
+  setPageId: (page: string) => void;
 };
 
 const CCContext = React.createContext<CCContextType | null>(null);
@@ -16,11 +18,18 @@ export const CCProvider: React.FC<React.PropsWithChildren> = ({
     setCourseState(() => newValue);
   }
 
+  const [pageId, setPageIdState] = useState<string>("");
+  const setPageId = (newValue: string) => {
+    setPageIdState(() => newValue);
+  }
+
   return (
     <CCContext.Provider
       value={{
         course,
-        setCourse
+        pageId,
+        setCourse,
+        setPageId
       }}
     >
       {children}
